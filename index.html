@@ -189,11 +189,11 @@
 				var height = window.innerHeight;
 				canvas.width = width * scale;
 				canvas.height = height * scale;
-				canvas.style.width = 800 + "px";
-				canvas.style.height = 600 + "px";
+				canvas.style.width = width + "px";
+				canvas.style.height = height + "px";
 			}
-			animationCallbacks.push(adjustCanvasDimensions);
-			adjustCanvasDimensions();
+			//animationCallbacks.push(adjustCanvasDimensions);
+			//adjustCanvasDimensions();
 
 			setStatusMode = function setStatusMode(mode) {
 
