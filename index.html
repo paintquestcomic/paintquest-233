@@ -15,6 +15,16 @@
 			background-color: #ffffff;
 			font-family: 'Noto Sans', Arial, sans-serif;
 		}
+		
+		#container {
+			display: inline-block; /* scale with canvas */
+			vertical-align: top; /* prevent extra height */
+			position: relative; /* root for absolutely positioned overlay */
+			margin: 0;
+			border: 0 none;
+			padding: 0;
+			background-color: #0c0c0c;
+		}
 
 		#canvas {
 			display: block;
@@ -125,10 +135,11 @@
 		Enter — подтвердить<br>
 		Esc — назад</font>
 	</div>
-	<canvas id='canvas'>
-		HTML5 canvas appears to be unsupported in the current browser.<br />
-		Please try updating or use a different browser.
-	</canvas>
+	<div id="container">
+		<canvas id='canvas'>
+			HTML5 canvas appears to be unsupported in the current browser.<br />
+			Please try updating or use a different browser.
+		</canvas>
 	<div id='status'>
 		<div id='status-progress' style='display: none;' oncontextmenu='event.preventDefault();'><div id ='status-progress-inner'></div></div>
 		<div id='status-indeterminate' style='display: none;' oncontextmenu='event.preventDefault();'>
@@ -142,6 +153,7 @@
 			<div></div>
 		</div>
 		<div id='status-notice' class='godot' style='display: none;'></div>
+	</div>
 	</div>
 	<div>
 		<img src="line.png">
