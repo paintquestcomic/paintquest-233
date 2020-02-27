@@ -136,7 +136,7 @@
 		Esc — назад.<br></font>
 	</div>
 	<div id="container">
-	<canvas id='canvas' width="640" height="480">
+	<canvas id='canvas'>
 		HTML5 canvas appears to be unsupported in the current browser.<br />
 		Please try updating or use a different browser.
 	</canvas>
@@ -197,12 +197,12 @@
 
 			function adjustCanvasDimensions() {
 				var scale = window.devicePixelRatio || 1;
-				var width = window.innerWidth;
-				var height = window.innerHeight;
-				//canvas.width = width * scale;
-				//canvas.height = height * scale;
-				//canvas.style.width = width +"px";
-				//canvas.style.height = height +"px";
+				var width = 800;
+				var height = 600;
+				canvas.width = width * scale;
+				canvas.height = height * scale;
+				canvas.style.width = width +"px";
+				canvas.style.height = height +"px";
 			}
 			animationCallbacks.push(adjustCanvasDimensions);
 			adjustCanvasDimensions();
